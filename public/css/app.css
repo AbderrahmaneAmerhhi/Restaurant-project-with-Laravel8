@@ -1,0 +1,830 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+    --primaryyColor: #2c6975;
+    --white: #ffffff;
+    --green2: #68b2a0;
+    --green3: #cde0c9;
+    --green4: #e0ecde;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+/**************************************************************** Navigation Style *************************************************/
+.navigation {
+    position: fixed;
+    width: 230px;
+    height: 100%;
+    background: var(--primaryyColor);
+    border-left: 10px solid var(--primaryyColor);
+    transition: 0.5s;
+    overflow: hidden;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.navigation.active {
+    /* had class hya likadar ila dar toggel lnav okayna class ka likatkon fmain */
+    width: 70px !important;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: -30px !important;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 230px;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li .hoverd {
+    background: var(--white);
+}
+/* First Childe Style*/
+.navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li .hoverd a {
+    color: var(--primaryyColor);
+}
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon {
+    font-size: 1.75em;
+}
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* dik tkhrija ljihat limn likatkon mn b3d hover ( bach tfhm 0alb bdl backgroundcolor ) */
+.navigation ul li:hover a::before,
+.navigation ul li .hoverd a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li .hoverd a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+/************* style dya button singout ****************/
+
+.navigation ul li button {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    color: var(--white);
+    background-color: transparent;
+    border: none;
+}
+.navigation ul li:hover button,
+.navigation ul li .hoverd button {
+    color: var(--primaryyColor);
+}
+.navigation ul li button .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navigation ul li button .icon ion-icon {
+    font-size: 1.75em;
+}
+.navigation ul li button .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* dik tkhrija ljihat limn likatkon mn b3d hover ( bach tfhm 0alb bdl backgroundcolor ) */
+.navigation ul li:hover button::before,
+.navigation ul li .hoverd button::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.navigation ul li:hover button::after,
+.navigation ul li .hoverd button::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+/******************* main ****************************************/
+
+.main {
+    position: relative;
+    width: calc(100% - 230px);
+    left: 230px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+.main.active {
+    /* lclass likadar l main ila dar toggel*/
+    width: calc(100% - 70px);
+    left: 70px;
+}
+.topBar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.search label {
+    position: relative;
+    width: 100%;
+}
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--green2);
+}
+
+.search label ion-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.2em;
+}
+
+.user {
+    position: relative;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/************* Card Style ********************/
+.CardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.CardBox .Card {
+    position: relative;
+    background: var(--white);
+    padding: 38px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    /* best boxshadow for cards hada asan box shadow tkhdm bih*/
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.CardBox .Card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: var(--primaryyColor);
+}
+
+.CardBox .Card .CardName {
+    color: var(--green2);
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+.CardBox .Card .iconBox {
+    font-size: 3.5em;
+    color: var(--green2);
+}
+
+.CardBox .Card:hover {
+    background: var(--green3);
+}
+
+.CardBox .Card:hover .numbers,
+.CardBox .Card:hover .CardName,
+.CardBox .Card:hover .iconBox {
+    color: var(--white) !important;
+}
+/************** Change Bootstrap Style ***********/
+.btn-primary {
+    background: var(--primaryyColor) !important;
+    outline-color: var(--green4) !important;
+}
+.btn-pr {
+    /* n3ti color zr9 lhad class nkhdm biha blast primary*/
+    background: #2980b9 !important;
+    outline-color: #3498db;
+    color: var(--white);
+}
+.form-control {
+    outline-color: var(--green4) !important;
+}
+.form-check-input:checked {
+    background-color: var(--green2) !important;
+    border-color: var(--primaryyColor) !important;
+    outline-color: var(--green4) !important;
+}
+/* nbdl color dpartiya dpagination */
+.page-item .page-link {
+    color: var(--primaryyColor) !important;
+}
+.page-item.active .page-link {
+    background-color: var(--primaryyColor) !important;
+    border-color: var(--primaryyColor) !important;
+    color: white !important;
+}
+
+/************************ Category blades style style **************************************/
+
+.cat-details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+.cat-details .list {
+    position: relative;
+    display: grid;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.cartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cartHeader h2 {
+    font-weight: 600;
+    color: var(--primaryyColor);
+}
+.btn {
+    position: relative;
+    padding: 5px 18px;
+    background: var(--primaryyColor);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+.cat-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.cat-details table thead td {
+    font-weight: 600;
+}
+.cat-details .list table tr {
+    color: var(--green2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cat-details .list table tr:last-child {
+    border-bottom: none;
+}
+.cat-details .list table tbody tr:hover {
+    background: var(--green3);
+    color: var(--white);
+}
+.cat-details .list table tr td {
+    padding: 10px;
+}
+.cat-details .list table tr td:last-child {
+    text-align: end;
+}
+.cat-details .list table tr td:nth-child(2) {
+    text-align: end;
+}
+.cat-details .list table tr td:nth-child(3) {
+    text-align: center;
+}
+
+/******************** end category blades style **********************/
+/****************** details Style ******************************/
+
+/**************** Start menu style **********************/
+.menu-details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+.menu-details .list {
+    position: relative;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.cartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cartHeader h2 {
+    font-weight: 600;
+    color: var(--primaryyColor);
+}
+
+.menu-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.menu-details table thead td {
+    font-weight: 600;
+}
+.menu-details .list table tr {
+    color: var(--green2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menu-details .list table tr:last-child {
+    border-bottom: none;
+}
+.menu-details .list table tbody tr:hover {
+    background: var(--green2);
+    color: var(--white);
+}
+.menu-details .list table tr td {
+    padding: 10px;
+}
+.menu-details .list table tr td:last-child {
+    text-align: end;
+}
+.menu-details .list table tr td:nth-child(2) {
+    text-align: end;
+}
+.menu-details .list table tr td:nth-child(3) {
+    text-align: center;
+}
+/* menu category style */
+.menu-category {
+    position: relative;
+
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    /* overflow-y: scroll;*/
+}
+
+.menu-category table tr:hover {
+    background: var(--green2);
+    color: var(--white);
+}
+.menu-category table tr td {
+    padding: 12px 10px;
+}
+.menu-category table tr td a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2rem;
+    color: var(--green2);
+    text-decoration: none;
+}
+.menu-category table tr:hover td a {
+    color: var(--white);
+}
+
+/*************8 End menu style ***********************/
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+.details .recentOrders {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.cartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cartHeader h2 {
+    font-weight: 600;
+    color: var(--primaryyColor);
+}
+.btn {
+    position: relative;
+    padding: 5px 18px;
+    background: var(--primaryyColor);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead td {
+    font-weight: 600;
+}
+.details .recentOrders table tr {
+    color: var(--#68b2a0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details .recentOrders table tr:last-child {
+    border-bottom: none;
+}
+.details .recentOrders table tbody tr:hover {
+    background: var(--primaryyColor);
+    color: var(--white);
+}
+.details .recentOrders table tr td {
+    padding: 10px;
+}
+.details .recentOrders table tr td:last-child {
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(2) {
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(3) {
+    text-align: center;
+}
+
+/*** status tag style ***/
+.status.delivered {
+    padding: 2px 4px;
+    background: #8de02c;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.pending {
+    padding: 2px 4px;
+    background: #f9ca3f;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.return {
+    padding: 2px 4px;
+    background: #f00;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.inProgress {
+    padding: 2px 4px;
+    background: #1795ce;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/****************** recentCustomers style *********/
+.recentCustomers {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+.recentCustomers .imgBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.recentCustomers .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.recentCustomers table tr:hover {
+    background: var(--primaryyColor);
+    color: var(--white);
+}
+.recentCustomers table tr td {
+    padding: 12px 10px;
+}
+.recentCustomers table tr td h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2rem;
+}
+.recentCustomers table tr td h4 span {
+    font-size: 14px;
+    color: var(--green2);
+}
+
+.recentCustomers table tr:hover td h4 span {
+    color: var(--white);
+}
+
+/***************************8 Statistic charts Card styles ********************************/
+
+.statistics-container .row {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+.Pie-Chart {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.Top-X-charts {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+#piechart_3d {
+    width: 100%;
+    height: 100% !important;
+}
+#piechart_3d svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+#top_x_div {
+    width: 100% !important;
+    height: 600px !important;
+}
+#top_x_div svg {
+    width: 100%;
+    height: 100% !important;
+}
+/************** Responsive style *******************/
+
+@media (max-width: 991px) {
+    .navigation {
+        left: -230px;
+    }
+    .navigation.active {
+        left: 0;
+    }
+    .main {
+        width: 100%;
+        left: 0;
+    }
+    .main.active {
+        left: 70px;
+    }
+    .CardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*** Responsive charts style ********/
+    .statistics-container .row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #piechart_3d {
+        width: 100%;
+        height: 100% !important;
+    }
+    #piechart_3d svg {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    #top_x_div {
+        width: 100% !important;
+        height: 600px !important;
+    }
+    #top_x_div svg {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .menu-details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cat-details {
+        width: 100%;
+    }
+    .recentOrders {
+        overflow-x: auto;
+    }
+    .status.inProgress {
+        white-space: nowrap;
+    }
+    /*** Responsive charts style ********/
+    .statistics-container .row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #piechart_3d {
+        width: 100%;
+        height: 100% !important;
+    }
+    #piechart_3d svg {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    #top_x_div {
+        width: 100% !important;
+        height: 600px !important;
+    }
+    #top_x_div svg {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .CardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cartHeader h2 {
+        font-size: 20px;
+    }
+    .user {
+        min-width: 40px;
+    }
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 10000;
+    }
+    .navigation.active {
+        width: 100%;
+        left: 0;
+    }
+    .toggle {
+        z-index: 10001;
+    }
+    .main.active .toggle {
+        position: fixed;
+        right: 0;
+        left: initial;
+        color: var(--white);
+    }
+    /*** Responsive charts style ********/
+    .statistics-container .row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #piechart_3d {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        height: 100% !important;
+    }
+    #piechart_3d svg {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    #top_x_div {
+        width: 100% !important;
+        height: 600px !important;
+    }
+    #top_x_div svg {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}

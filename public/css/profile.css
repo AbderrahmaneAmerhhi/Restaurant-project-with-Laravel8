@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+:root {
+    --primaryyColor: #2c6975;
+    --white: #ffffff;
+    --green2: #68b2a0;
+    --green3: #cde0c9;
+    --green4: #e0ecde;
+}
+.profile-container {
+    width: 100%;
+    height: 100vh;
+    /* background-image: url("../images/backgrounds/greenBackground.jpg"); */
+    background-color: var(--green4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-box {
+    background-color: var(--green2);
+    text-align: center;
+    padding: 40px 90px;
+    color: #fff;
+    position: relative;
+    border-radius: 20px;
+}
+.back-btn {
+    position: absolute;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    left: 40px;
+    top: 40px;
+}
+.edit-btn {
+    position: absolute;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    right: 40px;
+    top: 40px;
+}
+.back-btn:hover,
+.edit-btn:hover {
+    color: var(--green4);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 6px;
+    margin-top: 40px;
+}
+.profile-bottom {
+    background: var(--white);
+    color: var(--green2);
+    padding: 60px 0;
+    margin-right: -90px;
+    margin-left: -90px;
+    margin-bottom: -40px;
+    border-radius: 20px;
+    margin-top: -10px;
+}
+.profile-bottom button {
+    border: none;
+    background: transparent;
+}
+.profile-bottom i {
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--green2);
+    margin-top: 15px;
+    cursor: pointer;
+}
+.profile-bottom i:hover {
+    color: var(--green3);
+}
+
+.profile-box span {
+    background: var(--white);
+    color: var(--green2);
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(116, 199, 143, 0.5);
+    padding: 15px 60px;
+    cursor: pointer;
+    border-radius: 30px;
+    border-bottom: -50px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.profile-box .user-name {
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.profile-box .ville {
+    text-transform: uppercase;
+}
+.profile-box .email {
+    text-transform: uppercase;
+}
+
+/**** Edit profile style  ***/
+
+.profile-box .myInput {
+    width: 320px;
+    border-radius: 25px;
+    padding: 10px;
+    padding-left: 50px;
+    border: none;
+    /* shadow dyal inputs zwiiin*/
+    -webkit-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+}
+
+.profile-box .myInput:focus {
+    outline: none;
+}
+
+.myForm {
+    position: relative;
+    margin-top: 10px;
+}
+.profile-box .myForm .fas {
+    position: relative;
+    color: var(--green2);
+    left: 36px;
+}
+.profile-box .edit_btn {
+    background: var(--white);
+    color: var(--green2);
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(116, 199, 143, 0.5);
+    padding: 15px 60px;
+    cursor: pointer;
+    border-radius: 30px;
+    border-bottom: -50px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* n4br input file */
+input[type="file"] {
+    display: none;
+}
+label {
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: var(--green1);
+    color: white;
+    border: 1px solid var(--green3);
+    padding: 2px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+label:hover {
+    background-color: var(--green4);
+    color: var(--primaryyColor);
+}

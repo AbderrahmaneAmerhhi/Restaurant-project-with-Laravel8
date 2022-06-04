@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{$admin->name}}</title>
+     {{-- My Style Style link  --}}
+    <link rel="stylesheet" href="{{asset('css/profile.css')}}">
+    {{-- Bootstrap5 file style --}}
+    <link rel="stylesheet" href="../../css/Bootstrap5.css" >
+
+    {{-- font awosem cdn link --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="profile-container">
+        <div class="profile-box">
+            <a href="{{URL::previous()}}" class="back-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <a href="{{route('user.edit',$admin->id)}}" class="edit-btn">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </a>
+            <img src="{{asset('images/profile/userImage.png')}}" class="profile-pic" alt="user_image">
+            <h3 class="user-name">{{$admin->name}}</h3>
+            <p class="email">{{$admin->email}}</p>
+            <p class="ville">{{$admin->ville}}</p>
+
+            <span>Admin</span>
+            <div class="profile-bottom">
+                <p>Logout</p>
+                <form action="{{route("user.logout")}}" method="post">
+                    @csrf
+                   <button type="submit">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                   </button>
+                  </form>
+            </div>
+        </div>
+    </div>
+     {{-- Bootstrap5 script --}}
+     <script src="../../js/Bootstrap5.js"></script>
+</body>
+</html>
