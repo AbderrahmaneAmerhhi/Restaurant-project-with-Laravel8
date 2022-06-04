@@ -41,9 +41,7 @@ html {
 section {
     padding: 2rem 9%;
 }
-/* section:nth-child(even) {
-    background: #eee;
-}*/
+
 .dishes,
 .menu {
     background: #eee;
@@ -135,56 +133,7 @@ header .icons a:hover {
 header .icons #menu-bars {
     display: none;
 }
-/*
-#search-form {
-    position: fixed;
-    top: -110%; /* kan4br had form ma4anbynha tatwrk 3la icon d serach
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1004;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-}
-#search-form #search-box {
-    width: 50rem;
-    border-bottom: 0.1rem solid #fff;
-    padding: 1rem 0;
-    color: #fff;
-    font-size: 3rem;
-    text-transform: none;
-    background: none;
-}
-#search-form #search-box::placeholder {
-    color: #eee;
-}*/
-/* style dyal dak buttn X likaytl3 bach dir cancel l text hit type d input shearch
-#search-form #search-box::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-}
-#search-form label {
-    color: #fff;
-    cursor: pointer;
-    font-size: 3rem;
-}
-#search-form label:hover {
-    color: var(--green2);
-}
-#search-form #close {
-    position: absolute;
-    color: #fff;
-    cursor: pointer;
-    top: 2rem;
-    right: 3rem;
-    font-size: 5rem;
-}*/
-/* active class bach kantl3 search form
-#search-form.active {
-    top: 0;
-}*/
+
 /*********************** Home Section Style ************************************/
 
 .home .home-slider .slide {
@@ -246,7 +195,6 @@ header .icons #menu-bars {
     text-transform: uppercase;
 }
 .dishes .box-container {
-    /* bach dok divat fin kayna makla itfr9o 3la hsab scrin ankhdm b display grid btari9a khra 4ir hadik likankhdm biha */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap: 1.5rem;
@@ -500,7 +448,7 @@ header .icons #menu-bars {
 .review2 form .inputBox {
     display: flex;
     flex-wrap: wrap;
-    /*justify-content: space-between;*/
+
 }
 .review2 form .inputBox .input {
     width: 100%;
@@ -673,10 +621,7 @@ th:last-child {
 }
 /*responsive cart style  */
 @media only screen and (max-width: 600px) {
-    .cart-info {
-        /* display: none;*/
-        /* kahydo content discription ditem odak tkhbi9 f screen s4ira*/
-    }
+
 }
 
 /*********** responsive style *********************/
@@ -722,7 +667,7 @@ th:last-child {
             100% 0,
             100% 0,
             0 0
-        ); /* hadi bach 4brt .nabar fhad widh dyal 768 o4antl3ha b javascript */
+        );
     }
     header .navbar.active {
         clip-path: polygon(
@@ -730,7 +675,7 @@ th:last-child {
             100% 0,
             100% 100%,
             0% 100%
-        ); /* hadi bach 4antl3 navbar iban  */
+        );
     }
     header .navbar a {
         display: block;

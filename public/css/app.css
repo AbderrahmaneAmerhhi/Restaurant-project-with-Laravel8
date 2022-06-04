@@ -100,7 +100,6 @@ body {
     white-space: nowrap;
 }
 
-/* dik tkhrija ljihat limn likatkon mn b3d hover ( bach tfhm 0alb bdl backgroundcolor ) */
 .navigation ul li:hover a::before,
 .navigation ul li .hoverd a::before {
     content: "";
@@ -165,7 +164,6 @@ body {
     white-space: nowrap;
 }
 
-/* dik tkhrija ljihat limn likatkon mn b3d hover ( bach tfhm 0alb bdl backgroundcolor ) */
 .navigation ul li:hover button::before,
 .navigation ul li .hoverd button::before {
     content: "";
@@ -204,7 +202,7 @@ body {
     transition: 0.5s;
 }
 .main.active {
-    /* lclass likadar l main ila dar toggel*/
+
     width: calc(100% - 70px);
     left: 70px;
 }
@@ -290,7 +288,6 @@ body {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    /* best boxshadow for cards hada asan box shadow tkhdm bih*/
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 .CardBox .Card .numbers {
@@ -325,7 +322,6 @@ body {
     outline-color: var(--green4) !important;
 }
 .btn-pr {
-    /* n3ti color zr9 lhad class nkhdm biha blast primary*/
     background: #2980b9 !important;
     outline-color: #3498db;
     color: var(--white);
@@ -338,7 +334,6 @@ body {
     border-color: var(--primaryyColor) !important;
     outline-color: var(--green4) !important;
 }
-/* nbdl color dpartiya dpagination */
 .page-item .page-link {
     color: var(--primaryyColor) !important;
 }

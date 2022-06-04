@@ -155,7 +155,6 @@
     font-size: 16px;
 }
 
-/* n4br input file */
 input[type="file"] {
     display: none;
 }
