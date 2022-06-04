@@ -2,7 +2,7 @@
 
 
 @section('search')
-   {{-- section fin aykon input dyal shearch   --}}
+   {{-- section   shearch   --}}
    <div class="search">
        <form action="{{route('users.search')}}" method="POST" id="serach">
         @csrf
@@ -19,7 +19,7 @@
     </div>
 @endsection
 @section('content')
-  <!-- Cards bhal hadok fin taykono statistics -->
+  <!-- Cards -->
             <div class="CardBox">
                 <div class="Card">
                     <div>

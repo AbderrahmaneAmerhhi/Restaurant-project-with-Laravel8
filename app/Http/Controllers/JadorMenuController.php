@@ -40,7 +40,7 @@ class JadorMenuController extends Controller
     public function store(StorejadorMenuRequest $request)
     {
 
-        //dd($request);
+
         $request->validate([
             'user_id' => 'required|numeric',
             'menu_id' => 'required|numeric',

@@ -14,10 +14,7 @@ use League\CommonMark\Node\Query\OrExpr;
 class AdminController extends Controller
 {
     //
-    /* public function __construct()
-    {
-        $this->middleware("auth");
-    }*/ // drt middleware f web.php
+
     public function __construct()
     {
         $this->middleware('authAdmin');

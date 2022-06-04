@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            // $table->string('slug', 191)->unique();
             $table->text('description');
             $table->decimal('pric', 8, 2)->default(0);
             $table->decimal('old_price', 8, 2)->default(0);

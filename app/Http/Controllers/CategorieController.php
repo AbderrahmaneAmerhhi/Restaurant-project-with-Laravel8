@@ -68,10 +68,8 @@ class CategorieController extends Controller
             'title' => 'required|max:20|min:3',
             "Visibility" => 'required',
         ]);
-        // $slug = Str::slug($request->title);
         Categorie::create([
             'title' => $request->title,
-            //'slug' => $slug,
             'Visibility' => $request->Visibility,
         ]);
         return redirect()->route('categories.index')->with(['success' => 'Category Added']);
@@ -94,12 +92,11 @@ class CategorieController extends Controller
      * @param  \App\Models\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function edit(/* Categorie $categorie*/$id)
+    public function edit($id)
     {
         //
         $categorie = Categorie::where('id', $id)->first();
         return view('admin.categories.edit')->with(['cat' => $categorie]);
-        // return $categorie
     }
 
     /**
@@ -118,7 +115,6 @@ class CategorieController extends Controller
         $categorie = Categorie::where('id', $id)->first();
         $categorie->update([
             'title' => $request->title,
-            /* 'slug' => Str::slug($request->title),*/
             'Visibility' => $request->Visibility,
         ]);
         return redirect()->route('categories.index')->with(['success' => 'Category Updated']);
@@ -130,7 +126,7 @@ class CategorieController extends Controller
      * @param  \App\Models\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(/*Categorie $categorie,*/$id)
+    public function destroy($id)
     {
         //
         $categorie = Categorie::where('id', $id)->first();

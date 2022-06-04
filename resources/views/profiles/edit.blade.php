@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{asset('css/profile.css')}}">
     {{-- Bootstrap5 file style --}}
     <link rel="stylesheet" href="../../css/Bootstrap5.css" >
-<!--icon dsite likatban lfo9-->
         <link rel="shortcut icon" href="{{asset("images/logos/logosite.png")}}">
     {{-- font awosem cdn link --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,9 +21,7 @@
             <a href="{{route('user.profile',$user->id)}}" class="back-btn">
                 <i class="fa-solid fa-chevron-left"></i>
             </a>
-            <!--<a href="#" class="edit-btn">
-                <i class="fa-solid fa-pen-to-square"></i>
-            </a>-->
+
             @if ($user->image !== 'image')
              <img src="{{asset('images/profile/'.$user->image)}}" class="profile-pic" alt="user_image">
             @else
@@ -78,9 +75,7 @@
             <a href="{{route('user.profile',$user->id)}}" class="back-btn">
                 <i class="fa-solid fa-chevron-left"></i>
             </a>
-            <!--<a href="#" class="edit-btn">
-                <i class="fa-solid fa-pen-to-square"></i>
-            </a>-->
+
             @if ($user->image !== 'image')
              <img src="{{asset('images/profile/'.$user->image)}}" class="profile-pic" alt="user_image">
             @else

@@ -45,7 +45,6 @@ class PaypalPaymentController extends Controller
             $total += $item['price'] * $item['qty'];
         }
         $data['total'] = $total;
-        // Payment nsift data lpaypal onmchi lpaypal bach nkhls
         $paypalModule = new ExpressCheckout();
 
         $res = $paypalModule->setExpressCheckout($data);
@@ -76,7 +75,7 @@ class PaypalPaymentController extends Controller
                     "qte" => $item->quantity,
                     "price" => $item->price,
                     "total" => $item->price * $item->quantity,
-                    "paid" => 1, // z3ma rah khls safi 4asift li
+                    "paid" => 1, //paid successfylly
                     'deliverde' => 0,
 
                 ]);

@@ -41,9 +41,7 @@ class CartController extends Controller
         $userId = auth()->user()->id;
         \Cart::session($userId)->update($id, array(
             'quantity' => array(
-                'relative' => false,/* ila drt false ayhyd
-              qte l9dima widir hadi jdida ila drt tru 4ir aydir
-              increment lvaleur l9dima bhal valeur jdida */
+                'relative' => false,
                 'value' => $request->quantity,
             )
         ));

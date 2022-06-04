@@ -28,7 +28,7 @@ Route::get('/', [HomeController::class, 'index'])->name('resto.index');;
 
 
 
-/******************** ayth routes *******************/
+/******************** auth routes *******************/
 // login function route
 Route::get('/login', [UserController::class, 'login'])->name('user.login');
 Route::post('/auth', [UserController::class, 'auth'])->name('user.auth');
@@ -39,7 +39,7 @@ Route::post('/register', [UserController::class, 'register'])->name('user.regist
 Route::group(['middleware' => 'auth'], function () {
 
     /********* dashboard routes **************/
-    // admin index route likaydina ldashboeard dadmin
+    // admin index route
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     // categories resources route
     Route::resource('categories', CategorieController::class);

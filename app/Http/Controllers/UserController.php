@@ -24,7 +24,6 @@ class UserController extends Controller
     public function index(Request $request)
     {
         if (!empty($request->search)) {
-            // nsift ga3 users l index dyal admin fdahsboear bach idir lihom gestion
             return view('admin.users.index')->with([
                 "users" => User::where('id', 'like', "%{$request->search}%")
                     ->orWhere('name', 'like', "%{$request->search}%")
@@ -39,7 +38,6 @@ class UserController extends Controller
                 'Earning' => Order::sum('total'),
             ]);
         } else {
-            // nsift ga3 users l index dyal admin fdahsboear bach idir lihom gestion
             return view('admin.users.index')->with([
                 "users" => User::latest()->paginate(5),
                 'usersCount' => User::where('admin', 0)->count(),

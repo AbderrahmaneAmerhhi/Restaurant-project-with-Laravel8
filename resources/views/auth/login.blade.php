@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
     {{-- Bootstrap5 file style --}}
     <link rel="stylesheet" href="../../css/Bootstrap5.css" >
-<!--icon dsite likatban lfo9-->
         <link rel="shortcut icon" href="{{asset("images/logos/logosite.png")}}">
     {{-- font awosem cdn link --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,7 +17,7 @@
 <body>
     <div class="row">
                     <div class="col-md-6 mx-auto my-4">
-                        @include('layout.alerts') {{-- hna fin antl3 les message dyali --}}
+                        @include('layout.alerts')
 
                     </div>
                 </div>
@@ -30,11 +29,7 @@
                         <form action="{{route('user.auth')}}" class="myForm text-center" method="POST">
                             @CSRF
                             <header>Login</header>
-                            <!-- <div class="form-group mb-3">
-                                <i class="fas fa-user"></i>
-                                <input type="text" class="myInput" placeholder="Username" id="username" required>
-                                <div class="invalid-feedback">Please fill out field</div>
-                            </div> -->
+
                             <div class="form-group mb-3">
                                 <i class="fas fa-envelope"></i>
                                 <input type="email" name="email" class="myInput" placeholder="Email" id="email" required>

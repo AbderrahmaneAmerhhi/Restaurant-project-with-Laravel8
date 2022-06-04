@@ -72,9 +72,7 @@ class CommentController extends Controller
      */
     public function store(StoreCommentRequest $request)
     {
-        /*'comment',
-        'user_id',
-        'status',*/
+
         $comment = filter_var($request->comment, FILTER_SANITIZE_STRING);
         $userId = auth()->user()->id;
         if (!empty($comment)) {

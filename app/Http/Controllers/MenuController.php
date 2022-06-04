@@ -58,7 +58,6 @@ class MenuController extends Controller
             'Earning' => Order::sum('total'),
         ]);
     }
-    // POPULAR nrd menu mn afdal atba9 3ndna
     public function POPULAR($id)
     {
         $menu = Menu::where('id', $id)->first();
@@ -210,7 +209,7 @@ class MenuController extends Controller
      * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function destroy(/*Menu $menu*/$id)
+    public function destroy($id)
     {
         //
         $menu = Menu::findOrFail($id);

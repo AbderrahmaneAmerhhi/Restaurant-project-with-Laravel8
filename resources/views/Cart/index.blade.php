@@ -1,6 +1,4 @@
-{{--@foreach ($menus as $menu)
-    <h1>{{$menu->name}}</h1>
-@endforeach--}}
+
 @extends('layout.app')
 
 @section('content')

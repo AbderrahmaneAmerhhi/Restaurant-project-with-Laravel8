@@ -5,10 +5,7 @@
 
     <!--- Home Section Start ---->
        <section class="home" id="home">
-           <!--- Remarque :
-             ANZID LES CLASS D SWIPER FHAD DIVAT
 
-           -->
            <div class="swiper home-slider">
                <div class="swiper-wrapper wrapper">
                    <div class="swiper-slide slide">
@@ -79,19 +76,10 @@
                   </form>
                   <img src="{{asset('images/menu/'.$propmenu->image)}}" alt="">
                   <h3>{{$propmenu->title}}</h3>
-                  {{--<div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                  </div>--}}
+
                   <span>{{$propmenu->pric}} MAD</span>
                   <form action="{{route('cart.add',$propmenu->id)}}" method="POST">
-                    {{--  nsift data li4aytzado f cart
-                    <input type="hidden" name="name"  value="{{$propmenu->title}}">
-                    <input type="hidden" name="id"  value="{{$propmenu->id}}">
-                    <input type="hidden" name="price"  value="{{$propmenu->pric}}">--}}
+
                     <input type="hidden" name="quantity"  value="1">
                     @csrf
                     <button
@@ -143,7 +131,6 @@
                         <span>24/7 service</span>
                     </div>
                 </div>
-                {{--<a href="#" class="btn" >learn more</a>--}}
             </div>
         </div>
       </section>
@@ -172,19 +159,7 @@
                         </form>
                     </div>
                     <div class="content">
-                        {{--'title',
-                        'description',
-                        'pric',
-                        'old_price',
-                        'image',
-                        'categorie_id',
-                        <div class="stars">
-                            <div class="fas fa-star"></div>
-                            <div class="fas fa-star"></div>
-                            <div class="fas fa-star"></div>
-                            <div class="fas fa-star"></div>
-                            <div class="fas fa-star-half-alt"></div>
-                        </div>--}}
+
                         <h3>{{$menu->title}}</h3>
                         <p>
                             {{$menu->description}}
@@ -209,7 +184,6 @@
 
     <!-- menu section end -->
 
-     <!-------------------------------T3li9a dyal nas likayzoro site 3la chakl swiper kaythrko-------------------------------------->
     <!-- review section start -->
     @if ($reviews->count())
     <section class="review" id="review">
@@ -232,13 +206,7 @@
                                     <div class="user-info">
                                         <h3>{{$review->user->name}}</h3>
                                     </div>
-                                    {{--<div class="stars">
-                                        <div class="fas fa-star"></div>
-                                        <div class="fas fa-star"></div>
-                                        <div class="fas fa-star"></div>
-                                        <div class="fas fa-star"></div>
-                                        <div class="fas fa-star-half-alt"></div>
-                                    </div>--}}
+
                                 </div>
                                     <p>
                                     {{$review->comment}}

@@ -1,7 +1,6 @@
 @extends('layout.sidebar')
 
 @section('search')
-   {{-- section fin aykon input dyal shearch   --}}
    <div class="search">
        <form action="{{route('cats.index')}}" method="POST" id="serach">
         @csrf
@@ -19,7 +18,7 @@
 @endsection
 @section('content')
 
-      <!-- Cards bhal hadok fin taykono statistics -->
+      <!-- Cards-->
             <div class="CardBox">
                 <div class="Card">
                     <div>

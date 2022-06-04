@@ -2,7 +2,7 @@
 
 
 @section('search')
-   {{-- section fin aykon input dyal shearch   --}}
+   {{-- section shearch   --}}
    <div class="search">
        <form action="{{route('reviews.search')}}" method="POST" id="serach">
         @csrf
@@ -19,7 +19,7 @@
     </div>
 @endsection
 @section('content')
-   <!-- Cards bhal hadok fin taykono statistics -->
+   <!-- Cards  -->
             <div class="CardBox">
 
                 <div class="Card">
@@ -113,7 +113,6 @@
                                                     <td class="d-flex flex-row justify-content-center align-items-center ">
                                                        @if ($comment->status === 0 &&  empty($comment->deleted_at))
 
-                                                          {{-- <a href="{{route('reviews.edit',$comment->id)}}" class="btn btn-pr btn-sm"><i class="fas fa-check text-white"></i></a> --}}
                                                             <form  id="{{$comment->id}}"
                                                                 action="{{route("reviews.update",$comment->id)}}"
                                                                 method="Post">

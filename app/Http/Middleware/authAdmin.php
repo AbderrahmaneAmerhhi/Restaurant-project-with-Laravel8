@@ -16,7 +16,6 @@ class authAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        // had midllewar hadaf mnha mat3ti dak route lmn 3an3tiha taykon user admin
         if (!$request->expectsJson()) {
             if (auth()->user()->admin === 1) {
                 return $next($request);

@@ -2,7 +2,7 @@
 
 
 @section('search')
-   {{-- section fin aykon input dyal shearch   --}}
+   {{-- section shearch   --}}
    <div class="search">
        <form action="{{route('menus.search')}}" method="POST" id="serach">
         @csrf
@@ -20,7 +20,7 @@
 @endsection
 @section('content')
 
-      <!-- Cards bhal hadok fin taykono statistics -->
+      <!-- Cards for statistics -->
             <div class="CardBox">
                 <div class="Card">
                     <div>
@@ -143,7 +143,6 @@
                                                             </button>
                                                         </form>
                                                         @if ($menu->POPULAR === 0)
-                                                            {{-- bach nrd had taba9 POPULAR mn aham atba9 --}}
                                                             <form  action="{{route("menu.popular",$menu->id)}}" method="post" style="margin-left: 4px !important">
                                                            @csrf
                                                             @method('PUT')
@@ -154,7 +153,6 @@
                                                             </button>
                                                           </form>
                                                         @else
-                                                        {{-- nhyd menu mn POPULAR --}}
                                                         <form  action="{{route("menu.NONpopular",$menu->id)}}" method="post" style="margin-left: 4px !important">
                                                            @csrf
                                                             @method('PUT')

@@ -9,7 +9,6 @@
 
     <title>{{ config('app.name', 'Resto') }}</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--icon dsite likatban lfo9-->
         <link rel="shortcut icon" href="{{asset("images/logos/logosite.png")}}">
     {{-- My Style Style link  --}}
     <link rel="stylesheet" href="../../css/index.css">
@@ -72,12 +71,6 @@
      {{-- ennd header navbar section --}}
 
 
-    <!---  Search Form
-    <form action="" id="search-form">
-        <input type="search" name="" placeholder="Search Here..." id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-        <i class="fas fa-times" id="close"></i>
-    </form>--->
 
     {{-- end shearch form --}}
      @yield('content')
@@ -127,7 +120,6 @@
 
 
      <!-- loader part -->
-     <!--  dik partya likadir load 9bel madkhl lsite dik partya zwina    -->
      <div class="loader-container">
          <img src="images/LoaderGifs/loaderr.gif" alt="">
      </div>

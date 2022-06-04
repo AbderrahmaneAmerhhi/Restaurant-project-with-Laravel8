@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Page Content -->
-            <!-- Cards bhal hadok fin taykono statistics -->
+            <!-- Cardsfor statistics -->
             <div class="CardBox">
                 <div class="Card">
                     <div>
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            {{-- Page content  fin andir mibyanat ankhdm b Google chart Api--}}
+            {{-- Page content  --}}
             {{-- Google charts script  --}}
               <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -48,7 +48,6 @@
                     <div class="Pie-Chart ">
                         {{-- char 3D Pie Chart fih menu ototal bach tba3o --}}
                         <script  type="text/javascript">
-                         // array dyal php lifih data dyal mjmo3 dyal tamana 3la hsab kola menu 3tit data dyalo larray d js bach nkhdm bih ffor
                             let SalesByMenus =  {{ Js::from($SalesByMenus) }};
                                     google.charts.load("current", {packages:["corechart"]});
                                 google.charts.setOnLoadCallback(drawChart);
@@ -86,10 +85,7 @@
 
                         function drawStuff() {
 
-                                //         [SalesByMenus[i]['menu_name'],SalesByMenus[i]['total_quantity']],
-                            //  data.addRows([
-                            // [OrdersCountByDate[i]['month_year'], Number(OrdersCountByDate[i]['CountOrder'])],
-                            // ]);
+
                             var data = new google.visualization.DataTable();
                             data.addColumn('string', 'date');
                             data.addColumn('number', 'Number of sales');
