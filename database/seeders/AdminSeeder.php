@@ -20,10 +20,10 @@ class AdminSeeder extends Seeder
         //
         User::create([
 
-            'name' => 'abdo',
-            'FullName' => 'Abderrahmane',
-            'email' => 'abderrahmane.amerrhi@gmail.com',
-            'ville' => 'agadir',
+            'name' => 'admin',
+            'FullName' => 'admin',
+            'email' => 'admin@admin.com',
+            'ville' => 'admin',
             'email_verified_at' => now(),
             'password' => Hash::make("admin"), // password
             'remember_token' => Str::random(10),

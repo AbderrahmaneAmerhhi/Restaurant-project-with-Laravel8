@@ -1,64 +1,138 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://main--abderrahmaneamerrhiportfoliov2.netlify.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abderrahmane-amerrhi-807b40201/)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# RESTAURANT WEB APP
 
-## About Laravel
+A restaurant web application with laravel 8 that enables you to share menus, and customers can book orders and manage your restaurant in a simple and excellent way
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Discover [Vedio](https://abderrahmaneamerrhi.com/assets/vedresto_withMusic-3035c394.mp4).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Information
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+I built the app using laravel , made a simple backend CRUD and use blade in front end
 
-## Learning Laravel
+### Technologies used in Backend
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Technology             |            Description             | Version |
+| :--------------------- | :--------------------------------: | :-----: |
+| Php                    |            PHP language            |  8.0.2  |
+| Laravel                |     Laravel backend framework      |  ^8.65  |
+| laravel/ui             |             UI Package             |  ^3.3   |
+| realrashid/sweet-alert |        sweet-alert Package         |  ^5.0   |
+| maatwebsite/excel      | Excel pacage for laravel framework |   3.1   |
+| srmklive/paypal        |      paypal checkout Package       |  ~3.0   |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Cloning and use
 
-## Laravel Sponsors
+```bash or terminal
+  # Cloning app
+  git clone  https://github.com/AbderrahmaneAmerhhi/DSHOPV2.git
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+  # install composer
+   composer install
+   php artisan config:clear
+   php artisan config:cache
+  # copy .env.example => rename it to .env
 
-### Premium Partners
+  # generate App key
+   php artisan key:generate
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+  # install node_modules
+   npm install
 
-## Contributing
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Configuration
 
-## Code of Conduct
+```env
+# in .env file config database
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=yourdatabse_name
+DB_USERNAME=root
+DB_PASSWORD=databasepassword
 
-## Security Vulnerabilities
+# config Mail add your mail configuration
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+MAIL_MAILER=smtp
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
 
-## License
+# add your Paypal configuration
+PAYPAL_MODE=sandbox
+PAYPAL_SANDBOX_API_USERNAME=YourUserName
+PAYPAL_SANDBOX_API_PASSWORD=YourPassword
+PAYPAL_SANDBOX_API_SECRET=YourSecret
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+```
+
+## Migrate database and run app
+
+```bash or terminal
+  ########### open app in terminal or cmd or bash ... ###############
+  # Migrate data base run in terminal
+   php artisan migrate
+
+  # seed database
+   php artisan db:seed
+
+  # run app
+  php artisan serve
+   ## in other terminal
+    npm run dev
+
+  # open app in
+  http://127.0.0.1:8000
+
+  # login to admin dashboard
+   Url :http://127.0.0.1:8000/login
+   Email :   admin@gmail.com
+   Password : admin
+
+
+```
+
+## Features
+
+-   Dynamic backend with laravel Backend framework
+-   Responsive front-end with blade template html css bootstrap ...
+
+#### Dashboard Features
+
+-   Administrators can food menus t categories, add new categories, update a category, delete a category
+
+-   Administrators can also manage menus, edit, delete product view
+
+-   Manage orders
+
+-   manage visitors and users review accept them or remove them
+-   manage Users Accounts
+-   manage admin Account
+-   Track data statistics into charts and cards
+-   Export data with Excel
+
+#### User side
+
+-   Visitors can view your menus and restaurant information and can send you email Create a new account Log in...
+
+-   To order a new menu, add a new review, the user must be connected to their own account
+-   user can order menu and pay
+-   User can like the list and can go back to favorite list list
+
+-   Nice scroll banner
+
+-   filter menus by categories
+
+-   User can edit profile image and email password name ...
+
+# Discover
+
+Discover [Vedio](https://abderrahmaneamerrhi.com/assets/vedresto_withMusic-3035c394.mp4).
